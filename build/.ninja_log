@@ -83,3 +83,5 @@
 6530	7433	7464022609772495	CMakeFiles/blink.dir/C_/Users/tjwar/.pico-sdk/sdk/2.0.0/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj	ef5493a2cda2e374
 5844	7813	7464022602891670	CMakeFiles/blink.dir/C_/Users/tjwar/.pico-sdk/sdk/2.0.0/lib/cyw43-driver/src/cyw43_ll.c.obj	353ec711b39df6b5
 7814	8438	7464022622591054	blink.elf	6e9aeab059f945a1
+60	1426	7465500009256327	CMakeFiles/blink.dir/blink.c.obj	474d79530120bde6
+1429	3091	7465500022941806	blink.elf	6e9aeab059f945a1
