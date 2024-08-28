@@ -348,15 +348,6 @@ picotool_DIR:PATH=C:/Users/tjwar/.pico-sdk/picotool/2.0.0/picotool
 //The directory containing a CMake configuration file for pioasm.
 pioasm_DIR:PATH=pioasm_DIR-NOTFOUND
 
-//Value Computed by CMake
-testing_BINARY_DIR:STATIC=C:/Users/tjwar/OneDrive/Desktop/blink/build
-
-//Value Computed by CMake
-testing_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-testing_SOURCE_DIR:STATIC=C:/Users/tjwar/OneDrive/Desktop/blink
-
 
 ########################
 # INTERNAL cache entries
