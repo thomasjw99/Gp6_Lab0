@@ -11,7 +11,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # == DO NEVER EDIT THE NEXT LINES for Raspberry Pi Pico VS Code Extension to work ==
 if(WIN32)
-    set(USERHOME $ENV{USERPROFILE})
+   set(USERHOME $ENV{USERPROFILE})
 else()
     set(USERHOME $ENV{HOME})
 endif()
@@ -23,17 +23,11 @@ else()
 endif()
 
 if(DEFINED ENV{PICO_TOOLCHAIN_PATH})
-   set(PICO_TOOLCHAIN_PATH $ENV{PICO_TOOLCHAIN_PATH})
+    set(PICO_TOOLCHAIN_PATH $ENV{PICO_TOOLCHAIN_PATH})
 else()
-   set(PICO_TOOLCHAIN_PATH ${USERHOME}/.pico-sdk/toolchain/13_2_Rel1)
+    set(PICO_TOOLCHAIN_PATH ${USERHOME}/.pico-sdk/toolchain/13_2_Rel1)
 endif()
 
-set(sdkVersion 2.0.0)
-set(toolchainVersion 13_2_Rel1)
-set(picotoolVersion 2.0.0)
-include(${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
-
-set(picotoolVersion 2.0.0)
 set(pioasm_HINT ${USERHOME}/.pico-sdk/tools/2.0.0/pioasm)
 if(EXISTS ${pioasm_HINT})
     set(pioasm_DIR ${pioasm_HINT})
