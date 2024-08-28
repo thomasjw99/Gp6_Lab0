@@ -22,14 +22,38 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # == DO NEVER EDIT THE NEXT LINES for Raspberry Pi Pico VS Code Extension to work ==
 if(WIN32)
-    set(USERHOME $ENV{USERPROFILE})
+   set(USERHOME $ENV{USERPROFILE})
 else()
     set(USERHOME $ENV{HOME})
 endif()
-set(sdkVersion 2.0.0)
-set(toolchainVersion 13_2_Rel1)
-set(picotoolVersion 2.0.0)
-include(${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
+
+if(DEFINED ENV{PICO_SDK_PATH})
+    set(PICO_SDK_PATH $ENV{PICO_SDK_PATH})
+else()
+    set(PICO_SDK_PATH ${USERHOME}/.pico-sdk/sdk/2.0.0)
+endif()
+
+if(DEFINED ENV{PICO_TOOLCHAIN_PATH})
+    set(PICO_TOOLCHAIN_PATH $ENV{PICO_TOOLCHAIN_PATH})
+else()
+    set(PICO_TOOLCHAIN_PATH ${USERHOME}/.pico-sdk/toolchain/13_2_Rel1)
+endif()
+
+set(pioasm_HINT ${USERHOME}/.pico-sdk/tools/2.0.0/pioasm)
+if(EXISTS ${pioasm_HINT})
+    set(pioasm_DIR ${pioasm_HINT})
+endif()
+set(picotool_HINT ${USERHOME}/.pico-sdk/picotool/2.0.0/picotool)
+if(EXISTS ${picotool_HINT})
+    set(picotool_DIR ${picotool_HINT})
+endif()
+if(PICO_TOOLCHAIN_PATH MATCHES "RISCV")
+    set(PICO_PLATFORM rp2350-riscv CACHE STRING "Pico Platform")
+    if(PICO_TOOLCHAIN_PATH MATCHES "COREV")
+        set(PICO_COMPILER pico_riscv_gcc_zcb_zcmp)
+    endif()
+endif()
+
 # ====================================================================================
 set(PICO_BOARD pico_w CACHE STRING "Board type")
 
