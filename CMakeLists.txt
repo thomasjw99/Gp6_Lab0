@@ -59,9 +59,9 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(testing test.c )
+add_executable(testing blink.c )
 
-pico_set_program_name(testing "test")
+pico_set_program_name(testing "blink")
 pico_set_program_version(testing "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
