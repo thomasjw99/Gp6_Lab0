@@ -1,5 +1,5 @@
 
-C:/Users/tjwar/OneDrive/Desktop/blink/build/blink.elf:     file format elf32-littlearm
+/Users/u1530331/Documents/Adv.Embedded Lab/Lab0_AE/Gp6_Lab0/build/blink.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -7,23 +7,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .text         00006ccc  10000100  10000100  00001100  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       00039410  10006dd0  10006dd0  00007dd0  2**3
+  2 .rodata       00039428  10006dd0  10006dd0  00007dd0  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .binary_info  00000018  100401e0  100401e0  000411e0  2**2
+  3 .binary_info  00000018  100401f8  100401f8  000411f8  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   4 .ram_vector_table 000000c0  20000000  20000000  00043000  2**2
                   ALLOC
   5 .uninitialized_data 00000000  200000c0  200000c0  00042640  2**0
                   CONTENTS
-  6 .data         00000580  200000c0  100401f8  000420c0  2**4
+  6 .data         00000580  200000c0  10040210  000420c0  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   7 .tdata        00000000  20000640  20000640  00042640  2**0
                   CONTENTS, ALLOC, LOAD, DATA, THREAD_LOCAL
   8 .tbss         00000000  20000640  20000640  00000000  2**0
                   ALLOC, THREAD_LOCAL
-  9 .bss          00000e78  20000640  10040778  00042640  2**3
+  9 .bss          00000e78  20000640  10040790  00042640  2**3
                   ALLOC
- 10 .heap         0003eb48  200014b8  10040778  000434b8  2**2
+ 10 .heap         0003eb48  200014b8  10040790  000434b8  2**2
                   ALLOC, READONLY
  11 .scratch_x    00000000  20040000  20040000  00042640  2**0
                   CONTENTS
@@ -45,16 +45,16 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  20 .debug_rnglists 000017a8  00000000  00000000  0008bb00  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line   00019ede  00000000  00000000  0008d2a8  2**0
+ 21 .debug_line   0001a09e  00000000  00000000  0008d2a8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_str    00007a81  00000000  00000000  000a7186  2**0
+ 22 .debug_str    00007ada  00000000  00000000  000a7346  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_frame  00003658  00000000  00000000  000aec08  2**2
+ 23 .debug_frame  00003658  00000000  00000000  000aee20  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .debug_line_str 00000342  00000000  00000000  000b2260  2**0
+ 24 .debug_line_str 00000368  00000000  00000000  000b2478  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
-C:/Users/tjwar/OneDrive/Desktop/blink/build/blink.elf:     file format elf32-littlearm
+/Users/u1530331/Documents/Adv.Embedded Lab/Lab0_AE/Gp6_Lab0/build/blink.elf:     file format elf32-littlearm
 
 
 Disassembly of section .boot2:
@@ -202,8 +202,8 @@ Disassembly of section .text:
 
 100001d4 <binary_info_header>:
 100001d4:	7188ebf2 	.word	0x7188ebf2
-100001d8:	100401e0 	.word	0x100401e0
-100001dc:	100401f8 	.word	0x100401f8
+100001d8:	100401f8 	.word	0x100401f8
+100001dc:	10040210 	.word	0x10040210
 100001e0:	10000238 	.word	0x10000238
 100001e4:	e71aa390 	.word	0xe71aa390
 
@@ -264,13 +264,13 @@ Disassembly of section .text:
 10000236:	4770      	bx	lr
 
 10000238 <data_cpy_table>:
-10000238:	100401f8 	.word	0x100401f8
+10000238:	10040210 	.word	0x10040210
 1000023c:	200000c0 	.word	0x200000c0
 10000240:	20000640 	.word	0x20000640
-10000244:	10040778 	.word	0x10040778
+10000244:	10040790 	.word	0x10040790
 10000248:	20040000 	.word	0x20040000
 1000024c:	20040000 	.word	0x20040000
-10000250:	10040778 	.word	0x10040778
+10000250:	10040790 	.word	0x10040790
 10000254:	20041000 	.word	0x20041000
 10000258:	20041000 	.word	0x20041000
 1000025c:	00000000 	.word	0x00000000
@@ -356,7 +356,7 @@ Disassembly of section .text:
 10000312:	212e      	movs	r1, #46	@ 0x2e
 10000314:	f003 f8c0 	bl	10003498 <__assert_func>
 10000318:	10006dd0 	.word	0x10006dd0
-1000031c:	10008518 	.word	0x10008518
+1000031c:	10008534 	.word	0x10008534
 10000320:	10006de0 	.word	0x10006de0
 
 10000324 <gpio_set_function>:
@@ -457,9 +457,9 @@ Disassembly of section .text:
 100003e2:	f003 f859 	bl	10003498 <__assert_func>
 100003e6:	46c0      	nop			@ (mov r8, r8)
 100003e8:	20001298 	.word	0x20001298
-100003ec:	10006e10 	.word	0x10006e10
-100003f0:	10008544 	.word	0x10008544
-100003f4:	10006e3c 	.word	0x10006e3c
+100003ec:	10006e24 	.word	0x10006e24
+100003f0:	10008560 	.word	0x10008560
+100003f4:	10006e50 	.word	0x10006e50
 
 100003f8 <gpio_remove_raw_irq_handler_masked>:
 100003f8:	b510      	push	{r4, lr}
@@ -489,9 +489,9 @@ Disassembly of section .text:
 1000042a:	21f2      	movs	r1, #242	@ 0xf2
 1000042c:	f003 f834 	bl	10003498 <__assert_func>
 10000430:	20001298 	.word	0x20001298
-10000434:	10006e84 	.word	0x10006e84
-10000438:	10008520 	.word	0x10008520
-1000043c:	10006e3c 	.word	0x10006e3c
+10000434:	10006e98 	.word	0x10006e98
+10000438:	1000853c 	.word	0x1000853c
+1000043c:	10006e50 	.word	0x10006e50
 
 10000440 <gpio_acknowledge_irq>:
 10000440:	2307      	movs	r3, #7
@@ -573,9 +573,9 @@ Disassembly of section .text:
 100004d8:	20001298 	.word	0x20001298
 100004dc:	20000938 	.word	0x20000938
 100004e0:	40014130 	.word	0x40014130
-100004e4:	10006eb0 	.word	0x10006eb0
-100004e8:	10008578 	.word	0x10008578
-100004ec:	10006e3c 	.word	0x10006e3c
+100004e4:	10006ec4 	.word	0x10006ec4
+100004e8:	10008594 	.word	0x10008594
+100004ec:	10006e50 	.word	0x10006e50
 100004f0:	40014100 	.word	0x40014100
 
 100004f4 <gpio_init>:
@@ -608,8 +608,8 @@ Disassembly of section .text:
 1000052a:	f003 f8d9 	bl	100036e0 <__wrap_puts>
 1000052e:	2001      	movs	r0, #1
 10000530:	f002 ffac 	bl	1000348c <_exit>
-10000534:	10006f08 	.word	0x10006f08
-10000538:	10007b0c 	.word	0x10007b0c
+10000534:	10006f1c 	.word	0x10006f1c
+10000538:	10007b28 	.word	0x10007b28
 
 1000053c <hw_claim_lock>:
 1000053c:	f3ef 8010 	mrs	r0, PRIMASK
@@ -719,9 +719,9 @@ Disassembly of section .text:
 10000618:	2133      	movs	r1, #51	@ 0x33
 1000061a:	f002 ff3d 	bl	10003498 <__assert_func>
 1000061e:	46c0      	nop			@ (mov r8, r8)
-10000620:	10006f18 	.word	0x10006f18
-10000624:	10008590 	.word	0x10008590
-10000628:	10006f38 	.word	0x10006f38
+10000620:	10006f2c 	.word	0x10006f2c
+10000624:	100085ac 	.word	0x100085ac
+10000628:	10006f4c 	.word	0x10006f4c
 
 1000062c <next_striped_spin_lock_num>:
 1000062c:	4a05      	ldr	r2, [pc, #20]	@ (10000644 <next_striped_spin_lock_num+0x18>)
@@ -814,9 +814,9 @@ Disassembly of section .text:
 100006d8:	4803      	ldr	r0, [pc, #12]	@ (100006e8 <resolve_j_16+0x2c>)
 100006da:	31ff      	adds	r1, #255	@ 0xff
 100006dc:	f002 fedc 	bl	10003498 <__assert_func>
-100006e0:	10006f80 	.word	0x10006f80
-100006e4:	100085ec 	.word	0x100085ec
-100006e8:	10006f98 	.word	0x10006f98
+100006e0:	10006f94 	.word	0x10006f94
+100006e4:	10008608 	.word	0x10008608
+100006e8:	10006fac 	.word	0x10006fac
 
 100006ec <make_j_16>:
 100006ec:	b510      	push	{r4, lr}
@@ -845,9 +845,9 @@ Disassembly of section .text:
 1000071c:	000007fc 	.word	0x000007fc
 10000720:	00000ffe 	.word	0x00000ffe
 10000724:	ffffe000 	.word	0xffffe000
-10000728:	10006fe0 	.word	0x10006fe0
-1000072c:	100085e0 	.word	0x100085e0
-10000730:	10006f98 	.word	0x10006f98
+10000728:	10006ff4 	.word	0x10006ff4
+1000072c:	100085fc 	.word	0x100085fc
+10000730:	10006fac 	.word	0x10006fac
 
 10000734 <insert_bl_32>:
 10000734:	b510      	push	{r4, lr}
@@ -873,9 +873,9 @@ Disassembly of section .text:
 1000075c:	f002 fe9c 	bl	10003498 <__assert_func>
 10000760:	fffff000 	.word	0xfffff000
 10000764:	fffff800 	.word	0xfffff800
-10000768:	10007010 	.word	0x10007010
-1000076c:	100085bc 	.word	0x100085bc
-10000770:	10006f98 	.word	0x10006f98
+10000768:	10007024 	.word	0x10007024
+1000076c:	100085d8 	.word	0x100085d8
+10000770:	10006fac 	.word	0x10006fac
 
 10000774 <irq_is_enabled>:
 10000774:	2301      	movs	r3, #1
@@ -964,9 +964,9 @@ Disassembly of section .text:
 10000818:	f002 fe3e 	bl	10003498 <__assert_func>
 1000081c:	d0000124 	.word	0xd0000124
 10000820:	100001cd 	.word	0x100001cd
-10000824:	10007020 	.word	0x10007020
-10000828:	10008614 	.word	0x10008614
-1000082c:	10006f98 	.word	0x10006f98
+10000824:	10007034 	.word	0x10007034
+10000828:	10008630 	.word	0x10008630
+1000082c:	10006fac 	.word	0x10006fac
 
 10000830 <irq_add_shared_handler>:
 10000830:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -1200,11 +1200,11 @@ Disassembly of section .text:
 10000a1c:	ffffa100 	.word	0xffffa100
 10000a20:	200005b4 	.word	0x200005b4
 10000a24:	ffffbd01 	.word	0xffffbd01
-10000a28:	10007058 	.word	0x10007058
-10000a2c:	100085fc 	.word	0x100085fc
-10000a30:	10006f98 	.word	0x10006f98
-10000a34:	10007080 	.word	0x10007080
-10000a38:	100070a8 	.word	0x100070a8
+10000a28:	1000706c 	.word	0x1000706c
+10000a2c:	10008618 	.word	0x10008618
+10000a30:	10006fac 	.word	0x10006fac
+10000a34:	10007094 	.word	0x10007094
+10000a38:	100070bc 	.word	0x100070bc
 10000a3c:	00004801 	.word	0x00004801
 10000a40:	0000bd01 	.word	0x0000bd01
 10000a44:	0000aaaa 	.word	0x0000aaaa
@@ -1371,15 +1371,15 @@ Disassembly of section .text:
 10000ba0:	e000ed00 	.word	0xe000ed00
 10000ba4:	100001cd 	.word	0x100001cd
 10000ba8:	20000584 	.word	0x20000584
-10000bac:	1000712c 	.word	0x1000712c
-10000bb0:	100085cc 	.word	0x100085cc
-10000bb4:	10006f98 	.word	0x10006f98
+10000bac:	10007140 	.word	0x10007140
+10000bb0:	100085e8 	.word	0x100085e8
+10000bb4:	10006fac 	.word	0x10006fac
 10000bb8:	0000bd01 	.word	0x0000bd01
 10000bbc:	200014b5 	.word	0x200014b5
 10000bc0:	ffffbd01 	.word	0xffffbd01
 10000bc4:	0000aaaa 	.word	0x0000aaaa
 10000bc8:	200005be 	.word	0x200005be
-10000bcc:	10007160 	.word	0x10007160
+10000bcc:	10007174 	.word	0x10007174
 10000bd0:	00000235 	.word	0x00000235
 
 10000bd4 <irq_set_priority>:
@@ -1492,16 +1492,16 @@ Disassembly of section .text:
 10000cb8:	d0000124 	.word	0xd0000124
 10000cbc:	0000aaaa 	.word	0x0000aaaa
 10000cc0:	e000ed00 	.word	0xe000ed00
-10000cc4:	10007168 	.word	0x10007168
-10000cc8:	100085a0 	.word	0x100085a0
-10000ccc:	10006f98 	.word	0x10006f98
+10000cc4:	1000717c 	.word	0x1000717c
+10000cc8:	100085bc 	.word	0x100085bc
+10000ccc:	10006fac 	.word	0x10006fac
 10000cd0:	0000026e 	.word	0x0000026e
-10000cd4:	10007190 	.word	0x10007190
+10000cd4:	100071a4 	.word	0x100071a4
 10000cd8:	00000271 	.word	0x00000271
 10000cdc:	100001cd 	.word	0x100001cd
 10000ce0:	200014b5 	.word	0x200014b5
 10000ce4:	ffffbd01 	.word	0xffffbd01
-10000ce8:	1000719c 	.word	0x1000719c
+10000ce8:	100071b0 	.word	0x100071b0
 10000cec:	00000282 	.word	0x00000282
 
 10000cf0 <user_irq_unclaim>:
@@ -1534,7 +1534,7 @@ Disassembly of section .text:
 10000d28:	bd10      	pop	{r4, pc}
 10000d2a:	46c0      	nop			@ (mov r8, r8)
 10000d2c:	200014b6 	.word	0x200014b6
-10000d30:	100071a4 	.word	0x100071a4
+10000d30:	100071b8 	.word	0x100071b8
 
 10000d34 <sem_init>:
 10000d34:	b570      	push	{r4, r5, r6, lr}
@@ -1613,9 +1613,9 @@ Disassembly of section .text:
 10000dd0:	bd10      	pop	{r4, pc}
 10000dd2:	46c0      	nop			@ (mov r8, r8)
 10000dd4:	20000638 	.word	0x20000638
-10000dd8:	100071c0 	.word	0x100071c0
-10000ddc:	100086a8 	.word	0x100086a8
-10000de0:	100071e0 	.word	0x100071e0
+10000dd8:	100071d4 	.word	0x100071d4
+10000ddc:	100086c4 	.word	0x100086c4
+10000de0:	100071f4 	.word	0x100071f4
 10000de4:	20000640 	.word	0x20000640
 
 10000de8 <make_alarm_id>:
@@ -1989,9 +1989,9 @@ Disassembly of section .text:
 100010e4:	20001288 	.word	0x20001288
 100010e8:	40054000 	.word	0x40054000
 100010ec:	4005703c 	.word	0x4005703c
-100010f0:	10007274 	.word	0x10007274
-100010f4:	100086d4 	.word	0x100086d4
-100010f8:	100072a0 	.word	0x100072a0
+100010f0:	1000728c 	.word	0x1000728c
+100010f4:	100086f0 	.word	0x100086f0
+100010f8:	100072b8 	.word	0x100072b8
 100010fc:	10000e21 	.word	0x10000e21
 
 10001100 <ta_enable_irq_handler>:
@@ -2087,9 +2087,9 @@ Disassembly of section .text:
 100011ba:	f002 f96d 	bl	10003498 <__assert_func>
 100011be:	46c0      	nop			@ (mov r8, r8)
 100011c0:	200005cc 	.word	0x200005cc
-100011c4:	100072e0 	.word	0x100072e0
-100011c8:	100086bc 	.word	0x100086bc
-100011cc:	100072a0 	.word	0x100072a0
+100011c4:	100072f8 	.word	0x100072f8
+100011c8:	100086d8 	.word	0x100086d8
+100011cc:	100072b8 	.word	0x100072b8
 
 100011d0 <alarm_pool_add_alarm_at_force_in_context>:
 100011d0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
@@ -2367,7 +2367,7 @@ Disassembly of section .text:
 10001416:	e7de      	b.n	100013d6 <sleep_until+0x6a>
 10001418:	2301      	movs	r3, #1
 1000141a:	e7dc      	b.n	100013d6 <sleep_until+0x6a>
-1000141c:	10007304 	.word	0x10007304
+1000141c:	1000731c 	.word	0x1000731c
 10001420:	10000df1 	.word	0x10000df1
 10001424:	200014ac 	.word	0x200014ac
 10001428:	40054000 	.word	0x40054000
@@ -2529,7 +2529,7 @@ Disassembly of section .text:
 1000156c:	4802      	ldr	r0, [pc, #8]	@ (10001578 <timer_hardware_alarm_claim+0x10>)
 1000156e:	f7fe fffb 	bl	10000568 <hw_claim_or_assert>
 10001572:	bd10      	pop	{r4, pc}
-10001574:	10007354 	.word	0x10007354
+10001574:	1000736c 	.word	0x1000736c
 10001578:	20000940 	.word	0x20000940
 
 1000157c <timer_time_us_64>:
@@ -2832,12 +2832,12 @@ Disassembly of section .text:
 100017d8:	4000f000 	.word	0x4000f000
 100017dc:	4000c008 	.word	0x4000c008
 100017e0:	00003004 	.word	0x00003004
-100017e4:	10007378 	.word	0x10007378
-100017e8:	100086f8 	.word	0x100086f8
-100017ec:	100073c8 	.word	0x100073c8
-100017f0:	10007410 	.word	0x10007410
-100017f4:	1000742c 	.word	0x1000742c
-100017f8:	10007478 	.word	0x10007478
+100017e4:	10007390 	.word	0x10007390
+100017e8:	10008710 	.word	0x10008710
+100017ec:	100073e0 	.word	0x100073e0
+100017f0:	10007428 	.word	0x10007428
+100017f4:	10007444 	.word	0x10007444
+100017f8:	10007490 	.word	0x10007490
 
 100017fc <tick_start>:
 100017fc:	2380      	movs	r3, #128	@ 0x80
@@ -4022,7 +4022,7 @@ Disassembly of section .text:
 100020d4:	b510      	push	{r4, lr}
 100020d6:	4801      	ldr	r0, [pc, #4]	@ (100020dc <missing_double_func_shim+0x8>)
 100020d8:	f7fe fa18 	bl	1000050c <panic>
-100020dc:	10007494 	.word	0x10007494
+100020dc:	100074ac 	.word	0x100074ac
 
 100020e0 <__aeabi_double_init>:
 100020e0:	b570      	push	{r4, r5, r6, lr}
@@ -4100,9 +4100,9 @@ Disassembly of section .text:
 10002184:	100020d5 	.word	0x100020d5
 10002188:	00004453 	.word	0x00004453
 1000218c:	00004653 	.word	0x00004653
-10002190:	100074ac 	.word	0x100074ac
-10002194:	10008704 	.word	0x10008704
-10002198:	100074f0 	.word	0x100074f0
+10002190:	100074c4 	.word	0x100074c4
+10002194:	1000871c 	.word	0x1000871c
+10002198:	10007508 	.word	0x10007508
 1000219c:	00003854 	.word	0x00003854
 100021a0:	000038d8 	.word	0x000038d8
 100021a4:	00004649 	.word	0x00004649
@@ -4168,7 +4168,7 @@ Disassembly of section .text:
 10002218:	b510      	push	{r4, lr}
 1000221a:	4801      	ldr	r0, [pc, #4]	@ (10002220 <missing_float_func_shim+0x8>)
 1000221c:	f7fe f976 	bl	1000050c <panic>
-10002220:	10007dcc 	.word	0x10007dcc
+10002220:	10007de8 	.word	0x10007de8
 
 10002224 <__aeabi_float_init>:
 10002224:	b570      	push	{r4, r5, r6, lr}
@@ -4223,9 +4223,9 @@ Disassembly of section .text:
 10002294:	0000334c 	.word	0x0000334c
 10002298:	200013a8 	.word	0x200013a8
 1000229c:	10002219 	.word	0x10002219
-100022a0:	10007548 	.word	0x10007548
-100022a4:	10008718 	.word	0x10008718
-100022a8:	1000757c 	.word	0x1000757c
+100022a0:	10007560 	.word	0x10007560
+100022a4:	10008730 	.word	0x10008730
+100022a8:	10007594 	.word	0x10007594
 
 100022ac <__aeabi_mem_init>:
 100022ac:	4801      	ldr	r0, [pc, #4]	@ (100022b4 <__aeabi_mem_init+0x8>)
@@ -5578,11 +5578,11 @@ Disassembly of section .text:
 10002de0:	7fefffff 	.word	0x7fefffff
 10002de4:	41cdcd65 	.word	0x41cdcd65
 10002de8:	c1cdcd65 	.word	0xc1cdcd65
-10002dec:	1000760c 	.word	0x1000760c
-10002df0:	10007610 	.word	0x10007610
-10002df4:	10007600 	.word	0x10007600
-10002df8:	10007608 	.word	0x10007608
-10002dfc:	10008910 	.word	0x10008910
+10002dec:	10007624 	.word	0x10007624
+10002df0:	10007628 	.word	0x10007628
+10002df4:	10007618 	.word	0x10007618
+10002df8:	10007620 	.word	0x10007620
+10002dfc:	10008928 	.word	0x10008928
 10002e00:	3fe00000 	.word	0x3fe00000
 
 10002e04 <_vsnprintf>:
@@ -6057,9 +6057,9 @@ Disassembly of section .text:
 100031ba:	0005      	movs	r5, r0
 100031bc:	e788      	b.n	100030d0 <_vsnprintf+0x2cc>
 100031be:	46c0      	nop			@ (mov r8, r8)
-100031c0:	10008774 	.word	0x10008774
-100031c4:	100087b8 	.word	0x100087b8
-100031c8:	10008804 	.word	0x10008804
+100031c0:	1000878c 	.word	0x1000878c
+100031c4:	100087d0 	.word	0x100087d0
+100031c8:	1000881c 	.word	0x1000881c
 100031cc:	00009041 	.word	0x00009041
 100031d0:	9a1c      	ldr	r2, [sp, #112]	@ 0x70
 100031d2:	1d11      	adds	r1, r2, #4
@@ -6437,9 +6437,9 @@ Disassembly of section .text:
 100034be:	001a      	movs	r2, r3
 100034c0:	e7f1      	b.n	100034a6 <__assert_func+0xe>
 100034c2:	46c0      	nop			@ (mov r8, r8)
-100034c4:	10007618 	.word	0x10007618
-100034c8:	10007628 	.word	0x10007628
-100034cc:	10007dcc 	.word	0x10007dcc
+100034c4:	10007630 	.word	0x10007630
+100034c8:	10007640 	.word	0x10007640
+100034cc:	10007de8 	.word	0x10007de8
 
 100034d0 <runtime_init>:
 100034d0:	b510      	push	{r4, lr}
@@ -6532,7 +6532,7 @@ Disassembly of section .text:
 1000357e:	4153      	adcs	r3, r2
 10003580:	753b      	strb	r3, [r7, #20]
 10003582:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
-10003584:	10008960 	.word	0x10008960
+10003584:	10008978 	.word	0x10008978
 
 10003588 <stdio_stack_buffer_flush>:
 10003588:	b570      	push	{r4, r5, r6, lr}
@@ -6967,9 +6967,9 @@ Disassembly of section .text:
 100038fe:	21cd      	movs	r1, #205	@ 0xcd
 10003900:	f7ff fdca 	bl	10003498 <__assert_func>
 10003904:	ffff87ff 	.word	0xffff87ff
-10003908:	100077f4 	.word	0x100077f4
-1000390c:	100089c8 	.word	0x100089c8
-10003910:	10007814 	.word	0x10007814
+10003908:	1000780c 	.word	0x1000780c
+1000390c:	100089e0 	.word	0x100089e0
+10003910:	1000782c 	.word	0x1000782c
 
 10003914 <dma_channel_get_default_config>:
 10003914:	b500      	push	{lr}
@@ -7041,9 +7041,9 @@ Disassembly of section .text:
 100039a2:	21bf      	movs	r1, #191	@ 0xbf
 100039a4:	f7ff fd78 	bl	10003498 <__assert_func>
 100039a8:	ffe07fff 	.word	0xffe07fff
-100039ac:	1000786c 	.word	0x1000786c
-100039b0:	100089b0 	.word	0x100089b0
-100039b4:	10007814 	.word	0x10007814
+100039ac:	10007884 	.word	0x10007884
+100039b0:	100089c8 	.word	0x100089c8
+100039b4:	1000782c 	.word	0x1000782c
 
 100039b8 <start_spi_comms>:
 100039b8:	b510      	push	{r4, lr}
@@ -7137,7 +7137,7 @@ Disassembly of section .text:
 10003a7c:	7223      	strb	r3, [r4, #8]
 10003a7e:	e7e4      	b.n	10003a4a <cyw43_spi_deinit+0x36>
 10003a80:	0000084c 	.word	0x0000084c
-10003a84:	10008a08 	.word	0x10008a08
+10003a84:	10008a20 	.word	0x10008a20
 
 10003a88 <cyw43_spi_init>:
 10003a88:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -7365,8 +7365,8 @@ Disassembly of section .text:
 10003c5e:	4240      	negs	r0, r0
 10003c60:	e7e3      	b.n	10003c2a <cyw43_spi_init+0x1a2>
 10003c62:	46c0      	nop			@ (mov r8, r8)
-10003c64:	10008a1c 	.word	0x10008a1c
-10003c68:	10008a08 	.word	0x10008a08
+10003c64:	10008a34 	.word	0x10008a34
+10003c68:	10008a20 	.word	0x10008a20
 10003c6c:	50300000 	.word	0x50300000
 10003c70:	0000084c 	.word	0x0000084c
 10003c74:	2000092c 	.word	0x2000092c
@@ -7386,9 +7386,9 @@ Disassembly of section .text:
 10003cac:	c000ffff 	.word	0xc000ffff
 10003cb0:	00002038 	.word	0x00002038
 10003cb4:	0000e001 	.word	0x0000e001
-10003cb8:	10007880 	.word	0x10007880
-10003cbc:	100089f8 	.word	0x100089f8
-10003cc0:	10007890 	.word	0x10007890
+10003cb8:	10007898 	.word	0x10007898
+10003cbc:	10008a10 	.word	0x10008a10
+10003cc0:	100078a8 	.word	0x100078a8
 
 10003cc4 <cyw43_spi_transfer>:
 10003cc4:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -7783,13 +7783,13 @@ Disassembly of section .text:
 10003ff0:	00000444 	.word	0x00000444
 10003ff4:	afe00000 	.word	0xafe00000
 10003ff8:	0000a003 	.word	0x0000a003
-10003ffc:	100078e8 	.word	0x100078e8
-10004000:	100089e4 	.word	0x100089e4
-10004004:	10007890 	.word	0x10007890
-10004008:	1000790c 	.word	0x1000790c
-1000400c:	10007920 	.word	0x10007920
-10004010:	10007938 	.word	0x10007938
-10004014:	10007950 	.word	0x10007950
+10003ffc:	10007904 	.word	0x10007904
+10004000:	100089fc 	.word	0x100089fc
+10004004:	100078a8 	.word	0x100078a8
+10004008:	10007928 	.word	0x10007928
+1000400c:	1000793c 	.word	0x1000793c
+10004010:	10007954 	.word	0x10007954
+10004014:	1000796c 	.word	0x1000796c
 10004018:	2f00      	cmp	r7, #0
 1000401a:	d09c      	beq.n	10003f56 <cyw43_spi_transfer+0x292>
 1000401c:	46ba      	mov	sl, r7
@@ -8037,10 +8037,10 @@ Disassembly of section .text:
 10004210:	00006040 	.word	0x00006040
 10004214:	00000444 	.word	0x00000444
 10004218:	afe00000 	.word	0xafe00000
-1000421c:	10007920 	.word	0x10007920
-10004220:	100089e4 	.word	0x100089e4
-10004224:	10007890 	.word	0x10007890
-10004228:	1000790c 	.word	0x1000790c
+1000421c:	1000793c 	.word	0x1000793c
+10004220:	100089fc 	.word	0x100089fc
+10004224:	100078a8 	.word	0x100078a8
+10004228:	10007928 	.word	0x10007928
 
 1000422c <_cyw43_read_reg>:
 1000422c:	b530      	push	{r4, r5, lr}
@@ -8213,9 +8213,9 @@ Disassembly of section .text:
 1000438a:	31ff      	adds	r1, #255	@ 0xff
 1000438c:	f7ff f884 	bl	10003498 <__assert_func>
 10004390:	0ffff800 	.word	0x0ffff800
-10004394:	10007964 	.word	0x10007964
-10004398:	1000899c 	.word	0x1000899c
-1000439c:	10007890 	.word	0x10007890
+10004394:	10007980 	.word	0x10007980
+10004398:	100089b4 	.word	0x100089b4
+1000439c:	100078a8 	.word	0x100078a8
 
 100043a0 <cyw43_read_reg_u32>:
 100043a0:	b510      	push	{r4, lr}
@@ -8396,13 +8396,13 @@ Disassembly of section .text:
 100044fe:	46c0      	nop			@ (mov r8, r8)
 10004500:	00000828 	.word	0x00000828
 10004504:	0ffff800 	.word	0x0ffff800
-10004508:	10007980 	.word	0x10007980
-1000450c:	10008988 	.word	0x10008988
-10004510:	10007890 	.word	0x10007890
-10004514:	100079c0 	.word	0x100079c0
-10004518:	100079e8 	.word	0x100079e8
+10004508:	1000799c 	.word	0x1000799c
+1000450c:	100089a0 	.word	0x100089a0
+10004510:	100078a8 	.word	0x100078a8
+10004514:	100079dc 	.word	0x100079dc
+10004518:	10007a04 	.word	0x10007a04
 1000451c:	00000201 	.word	0x00000201
-10004520:	10007a4c 	.word	0x10007a4c
+10004520:	10007a68 	.word	0x10007a68
 
 10004524 <cyw43_write_bytes>:
 10004524:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -8527,13 +8527,13 @@ Disassembly of section .text:
 10004622:	46c0      	nop			@ (mov r8, r8)
 10004624:	00000828 	.word	0x00000828
 10004628:	0ffff800 	.word	0x0ffff800
-1000462c:	10007980 	.word	0x10007980
-10004630:	10008974 	.word	0x10008974
-10004634:	10007890 	.word	0x10007890
-10004638:	100079c0 	.word	0x100079c0
+1000462c:	1000799c 	.word	0x1000799c
+10004630:	1000898c 	.word	0x1000898c
+10004634:	100078a8 	.word	0x100078a8
+10004638:	100079dc 	.word	0x100079dc
 1000463c:	0000021a 	.word	0x0000021a
-10004640:	10007f74 	.word	0x10007f74
-10004644:	10007a68 	.word	0x10007a68
+10004640:	10007f90 	.word	0x10007f90
+10004644:	10007a84 	.word	0x10007a84
 
 10004648 <get_core_address>:
 10004648:	2801      	cmp	r0, #1
@@ -8712,16 +8712,16 @@ Disassembly of section .text:
 100047b6:	2009      	movs	r0, #9
 100047b8:	4240      	negs	r0, r0
 100047ba:	e7f8      	b.n	100047ae <sdpcm_process_rx_packet+0x14a>
-100047bc:	10007ab4 	.word	0x10007ab4
-100047c0:	10007acc 	.word	0x10007acc
-100047c4:	10007ae8 	.word	0x10007ae8
-100047c8:	10007b10 	.word	0x10007b10
-100047cc:	10007b30 	.word	0x10007b30
-100047d0:	10007b54 	.word	0x10007b54
-100047d4:	10007b7c 	.word	0x10007b7c
-100047d8:	10007b9c 	.word	0x10007b9c
-100047dc:	10007bbc 	.word	0x10007bbc
-100047e0:	10007bcc 	.word	0x10007bcc
+100047bc:	10007ad0 	.word	0x10007ad0
+100047c0:	10007ae8 	.word	0x10007ae8
+100047c4:	10007b04 	.word	0x10007b04
+100047c8:	10007b2c 	.word	0x10007b2c
+100047cc:	10007b4c 	.word	0x10007b4c
+100047d0:	10007b70 	.word	0x10007b70
+100047d4:	10007b98 	.word	0x10007b98
+100047d8:	10007bb8 	.word	0x10007bb8
+100047dc:	10007bd8 	.word	0x10007bd8
+100047e0:	10007be8 	.word	0x10007be8
 
 100047e4 <cyw43_ll_wifi_parse_scan_result>:
 100047e4:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
@@ -8799,7 +8799,7 @@ Disassembly of section .text:
 10004876:	46b0      	mov	r8, r6
 10004878:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
 1000487a:	46c0      	nop			@ (mov r8, r8)
-1000487c:	1003fd4c 	.word	0x1003fd4c
+1000487c:	1003fd64 	.word	0x1003fd64
 
 10004880 <cyw43_ll_parse_async_event>:
 10004880:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
@@ -8940,7 +8940,7 @@ Disassembly of section .text:
 10004998:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
 1000499a:	46c0      	nop			@ (mov r8, r8)
 1000499c:	0001001f 	.word	0x0001001f
-100049a0:	10007bdc 	.word	0x10007bdc
+100049a0:	10007bf8 	.word	0x10007bf8
 
 100049a4 <cyw43_ll_bus_sleep_helper>:
 100049a4:	b510      	push	{r4, lr}
@@ -8976,10 +8976,10 @@ Disassembly of section .text:
 100049e4:	0049      	lsls	r1, r1, #1
 100049e6:	f7fe fd57 	bl	10003498 <__assert_func>
 100049ea:	46c0      	nop			@ (mov r8, r8)
-100049ec:	10007c00 	.word	0x10007c00
-100049f0:	10008a7c 	.word	0x10008a7c
-100049f4:	10007c1c 	.word	0x10007c1c
-100049f8:	10007c60 	.word	0x10007c60
+100049ec:	10007c1c 	.word	0x10007c1c
+100049f0:	10008a94 	.word	0x10008a94
+100049f4:	10007c38 	.word	0x10007c38
+100049f8:	10007c7c 	.word	0x10007c7c
 
 100049fc <cyw43_write_reg>:
 100049fc:	b510      	push	{r4, lr}
@@ -9008,10 +9008,10 @@ Disassembly of section .text:
 10004a30:	0049      	lsls	r1, r1, #1
 10004a32:	f7fe fd31 	bl	10003498 <__assert_func>
 10004a36:	46c0      	nop			@ (mov r8, r8)
-10004a38:	10007c00 	.word	0x10007c00
-10004a3c:	10008a6c 	.word	0x10008a6c
-10004a40:	10007c1c 	.word	0x10007c1c
-10004a44:	10007c60 	.word	0x10007c60
+10004a38:	10007c1c 	.word	0x10007c1c
+10004a3c:	10008a84 	.word	0x10008a84
+10004a40:	10007c38 	.word	0x10007c38
+10004a44:	10007c7c 	.word	0x10007c7c
 
 10004a48 <cyw43_set_backplane_window>:
 10004a48:	b530      	push	{r4, r5, lr}
@@ -9117,7 +9117,7 @@ Disassembly of section .text:
 10004b22:	2006      	movs	r0, #6
 10004b24:	4240      	negs	r0, r0
 10004b26:	e7f8      	b.n	10004b1a <disable_device_core+0x2a>
-10004b28:	10007c6c 	.word	0x10007c6c
+10004b28:	10007c88 	.word	0x10007c88
 
 10004b2c <device_core_is_up>:
 10004b2c:	b570      	push	{r4, r5, r6, lr}
@@ -9151,7 +9151,7 @@ Disassembly of section .text:
 10004b6c:	f7fe fdb8 	bl	100036e0 <__wrap_puts>
 10004b70:	e7f6      	b.n	10004b60 <device_core_is_up+0x34>
 10004b72:	46c0      	nop			@ (mov r8, r8)
-10004b74:	10007c88 	.word	0x10007c88
+10004b74:	10007ca4 	.word	0x10007ca4
 
 10004b78 <cyw43_download_resource>:
 10004b78:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -9228,10 +9228,10 @@ Disassembly of section .text:
 10004c0e:	46a0      	mov	r8, r4
 10004c10:	bdf0      	pop	{r4, r5, r6, r7, pc}
 10004c12:	46c0      	nop			@ (mov r8, r8)
-10004c14:	10007c9c 	.word	0x10007c9c
-10004c18:	10008a54 	.word	0x10008a54
-10004c1c:	10007c1c 	.word	0x10007c1c
-10004c20:	10007cc0 	.word	0x10007cc0
+10004c14:	10007cb8 	.word	0x10007cb8
+10004c18:	10008a6c 	.word	0x10008a6c
+10004c1c:	10007c38 	.word	0x10007c38
+10004c20:	10007cdc 	.word	0x10007cdc
 
 10004c24 <cyw43_write_backplane>:
 10004c24:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -9361,8 +9361,8 @@ Disassembly of section .text:
 10004d34:	0000030e 	.word	0x0000030e
 10004d38:	0000030f 	.word	0x0000030f
 10004d3c:	0000030d 	.word	0x0000030d
-10004d40:	10007d08 	.word	0x10007d08
-10004d44:	10007d14 	.word	0x10007d14
+10004d40:	10007d24 	.word	0x10007d24
+10004d44:	10007d30 	.word	0x10007d30
 
 10004d48 <cyw43_ll_init>:
 10004d48:	6001      	str	r1, [r0, #0]
@@ -9559,12 +9559,12 @@ Disassembly of section .text:
 10004edc:	4240      	negs	r0, r0
 10004ede:	e7d5      	b.n	10004e8c <cyw43_ll_sdpcm_poll_device+0xe8>
 10004ee0:	200014b2 	.word	0x200014b2
-10004ee4:	10007d3c 	.word	0x10007d3c
+10004ee4:	10007d58 	.word	0x10007d58
 10004ee8:	0000ffff 	.word	0x0000ffff
-10004eec:	10007d68 	.word	0x10007d68
+10004eec:	10007d84 	.word	0x10007d84
 10004ef0:	0001000d 	.word	0x0001000d
-10004ef4:	10007d88 	.word	0x10007d88
-10004ef8:	10007da4 	.word	0x10007da4
+10004ef4:	10007da4 	.word	0x10007da4
+10004ef8:	10007dc0 	.word	0x10007dc0
 
 10004efc <cyw43_ll_process_packets>:
 10004efc:	b510      	push	{r4, lr}
@@ -9604,8 +9604,8 @@ Disassembly of section .text:
 10004f4a:	b002      	add	sp, #8
 10004f4c:	bd10      	pop	{r4, pc}
 10004f4e:	46c0      	nop			@ (mov r8, r8)
-10004f50:	10008a24 	.word	0x10008a24
-10004f54:	10007dd0 	.word	0x10007dd0
+10004f50:	10008a3c 	.word	0x10008a3c
+10004f54:	10007dec 	.word	0x10007dec
 
 10004f58 <cyw43_sdpcm_send_common>:
 10004f58:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -9733,7 +9733,7 @@ Disassembly of section .text:
 1000505c:	fffe7960 	.word	0xfffe7960
 10005060:	000f4240 	.word	0x000f4240
 10005064:	0001869f 	.word	0x0001869f
-10005068:	10007dec 	.word	0x10007dec
+10005068:	10007e08 	.word	0x10007e08
 
 1000506c <cyw43_send_ioctl>:
 1000506c:	b570      	push	{r4, r5, r6, lr}
@@ -9863,8 +9863,8 @@ Disassembly of section .text:
 10005176:	46c0      	nop			@ (mov r8, r8)
 10005178:	40054000 	.word	0x40054000
 1000517c:	000f423f 	.word	0x000f423f
-10005180:	10007e10 	.word	0x10007e10
-10005184:	10007e3c 	.word	0x10007e3c
+10005180:	10007e2c 	.word	0x10007e2c
+10005184:	10007e58 	.word	0x10007e58
 
 10005188 <cyw43_ll_ioctl>:
 10005188:	b530      	push	{r4, r5, lr}
@@ -9981,9 +9981,9 @@ Disassembly of section .text:
 10005270:	e7f4      	b.n	1000525c <cyw43_clm_load+0xb4>
 10005272:	46c0      	nop			@ (mov r8, r8)
 10005274:	00001002 	.word	0x00001002
-10005278:	1003fd54 	.word	0x1003fd54
-1000527c:	1003fd60 	.word	0x1003fd60
-10005280:	10007e64 	.word	0x10007e64
+10005278:	1003fd6c 	.word	0x1003fd6c
+1000527c:	1003fd78 	.word	0x1003fd78
+10005280:	10007e80 	.word	0x10007e80
 
 10005284 <cyw43_write_iovar_u32>:
 10005284:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -10182,7 +10182,7 @@ Disassembly of section .text:
 10005410:	0028      	movs	r0, r5
 10005412:	f7fc ff59 	bl	100022c8 <__wrap___aeabi_memcpy>
 10005416:	e7f6      	b.n	10005406 <cyw43_ll_wifi_get_mac+0x2e>
-10005418:	1003fd88 	.word	0x1003fd88
+10005418:	1003fda0 	.word	0x1003fda0
 
 1000541c <cyw43_ll_bus_init>:
 1000541c:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -10515,32 +10515,32 @@ Disassembly of section .text:
 1000571a:	46c0      	nop			@ (mov r8, r8)
 1000571c:	40054000 	.word	0x40054000
 10005720:	feedbead 	.word	0xfeedbead
-10005724:	10007ed0 	.word	0x10007ed0
+10005724:	10007eec 	.word	0x10007eec
 10005728:	000204b3 	.word	0x000204b3
 1000572c:	0001000e 	.word	0x0001000e
-10005730:	10007eec 	.word	0x10007eec
-10005734:	10007f08 	.word	0x10007f08
+10005730:	10007f08 	.word	0x10007f08
+10005734:	10007f24 	.word	0x10007f24
 10005738:	18004010 	.word	0x18004010
 1000573c:	18004044 	.word	0x18004044
-10005740:	10008a8c 	.word	0x10008a8c
+10005740:	10008aa4 	.word	0x10008aa4
 10005744:	00036bbe 	.word	0x00036bbe
 10005748:	00036bc0 	.word	0x00036bc0
-1000574c:	1003fa64 	.word	0x1003fa64
+1000574c:	1003fa7c 	.word	0x1003fa7c
 10005750:	0007fd14 	.word	0x0007fd14
 10005754:	ff4500ba 	.word	0xff4500ba
 10005758:	0007fffc 	.word	0x0007fffc
-1000575c:	10007f28 	.word	0x10007f28
+1000575c:	10007f44 	.word	0x10007f44
 10005760:	18002024 	.word	0x18002024
 10005764:	00010008 	.word	0x00010008
-10005768:	10007f54 	.word	0x10007f54
+10005768:	10007f70 	.word	0x10007f70
 1000576c:	0001001e 	.word	0x0001001e
 10005770:	0001001f 	.word	0x0001001f
 10005774:	0001000f 	.word	0x0001000f
-10005778:	10007e7c 	.word	0x10007e7c
-1000577c:	10007e88 	.word	0x10007e88
-10005780:	10007f84 	.word	0x10007f84
-10005784:	10007f6c 	.word	0x10007f6c
-10005788:	1003fd4c 	.word	0x1003fd4c
+10005778:	10007e98 	.word	0x10007e98
+1000577c:	10007ea4 	.word	0x10007ea4
+10005780:	10007fa0 	.word	0x10007fa0
+10005784:	10007f88 	.word	0x10007f88
+10005788:	1003fd64 	.word	0x1003fd64
 
 1000578c <cyw43_ll_wifi_set_wpa_auth>:
 1000578c:	b510      	push	{r4, lr}
@@ -10589,7 +10589,7 @@ Disassembly of section .text:
 100057e2:	4240      	negs	r0, r0
 100057e4:	e7fa      	b.n	100057dc <cyw43_ll_gpio_set+0x20>
 100057e6:	46c0      	nop			@ (mov r8, r8)
-100057e8:	10007f94 	.word	0x10007f94
+100057e8:	10007fb0 	.word	0x10007fb0
 
 100057ec <cyw43_ll_has_work>:
 100057ec:	b510      	push	{r4, lr}
@@ -10720,11 +10720,11 @@ Disassembly of section .text:
 10005908:	4805      	ldr	r0, [pc, #20]	@ (10005920 <cyw43_dump_async_event+0x54>)
 1000590a:	f7fd ff19 	bl	10003740 <__wrap_printf>
 1000590e:	bd10      	pop	{r4, pc}
-10005910:	10007f9c 	.word	0x10007f9c
-10005914:	1003fe94 	.word	0x1003fe94
-10005918:	10007fb0 	.word	0x10007fb0
-1000591c:	10007fb4 	.word	0x10007fb4
-10005920:	10007fb8 	.word	0x10007fb8
+10005910:	10007fb8 	.word	0x10007fb8
+10005914:	1003feac 	.word	0x1003feac
+10005918:	10007fcc 	.word	0x10007fcc
+1000591c:	10007fd0 	.word	0x10007fd0
+10005920:	10007fd4 	.word	0x10007fd4
 
 10005924 <cyw43_ensure_up>:
 10005924:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -10808,16 +10808,16 @@ Disassembly of section .text:
 100059d6:	46c0      	nop			@ (mov r8, r8)
 100059d8:	00000878 	.word	0x00000878
 100059dc:	20000974 	.word	0x20000974
-100059e0:	10007fc4 	.word	0x10007fc4
-100059e4:	1003fe84 	.word	0x1003fe84
-100059e8:	10007fe0 	.word	0x10007fe0
+100059e0:	10007fe0 	.word	0x10007fe0
+100059e4:	1003fe9c 	.word	0x1003fe9c
+100059e8:	10007ffc 	.word	0x10007ffc
 100059ec:	000008e3 	.word	0x000008e3
 100059f0:	000008e4 	.word	0x000008e4
 100059f4:	000008e5 	.word	0x000008e5
 100059f8:	000008e6 	.word	0x000008e6
 100059fc:	000008e7 	.word	0x000008e7
 10005a00:	000008e8 	.word	0x000008e8
-10005a04:	10008028 	.word	0x10008028
+10005a04:	10008044 	.word	0x10008044
 10005a08:	20000978 	.word	0x20000978
 10005a0c:	10005801 	.word	0x10005801
 
@@ -11110,7 +11110,7 @@ Disassembly of section .text:
 10005c72:	f000 fc64 	bl	1000653e <cyw43_cb_tcpip_set_link_up>
 10005c76:	e774      	b.n	10005b62 <cyw43_cb_process_async_event+0x6e>
 10005c78:	00000864 	.word	0x00000864
-10005c7c:	1003fdc8 	.word	0x1003fdc8
+10005c7c:	1003fde0 	.word	0x1003fde0
 10005c80:	00000868 	.word	0x00000868
 10005c84:	00000874 	.word	0x00000874
 10005c88:	0000086c 	.word	0x0000086c
@@ -11295,9 +11295,9 @@ Disassembly of section .text:
 10005dfe:	46c0      	nop			@ (mov r8, r8)
 10005e00:	afe00000 	.word	0xafe00000
 10005e04:	20000808 	.word	0x20000808
-10005e08:	100080fc 	.word	0x100080fc
-10005e0c:	1004000c 	.word	0x1004000c
-10005e10:	10008128 	.word	0x10008128
+10005e08:	10008118 	.word	0x10008118
+10005e0c:	10040024 	.word	0x10040024
+10005e10:	10008144 	.word	0x10008144
 
 10005e14 <pio_sm_unclaim>:
 10005e14:	b510      	push	{r4, lr}
@@ -11338,7 +11338,7 @@ Disassembly of section .text:
 10005e5e:	46c0      	nop			@ (mov r8, r8)
 10005e60:	afe00000 	.word	0xafe00000
 10005e64:	20000944 	.word	0x20000944
-10005e68:	10008170 	.word	0x10008170
+10005e68:	1000818c 	.word	0x1000818c
 
 10005e6c <pio_can_add_program>:
 10005e6c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
@@ -11418,9 +11418,9 @@ Disassembly of section .text:
 10005f0c:	f7fd fac4 	bl	10003498 <__assert_func>
 10005f10:	afe00000 	.word	0xafe00000
 10005f14:	20000808 	.word	0x20000808
-10005f18:	10008194 	.word	0x10008194
-10005f1c:	1003fff8 	.word	0x1003fff8
-10005f20:	10008128 	.word	0x10008128
+10005f18:	100081b0 	.word	0x100081b0
+10005f1c:	10040010 	.word	0x10040010
+10005f20:	10008144 	.word	0x10008144
 
 10005f24 <pio_sm_set_pindirs_with_mask>:
 10005f24:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -11616,7 +11616,7 @@ Disassembly of section .text:
 100060a4:	bd10      	pop	{r4, pc}
 100060a6:	46c0      	nop			@ (mov r8, r8)
 100060a8:	200014b0 	.word	0x200014b0
-100060ac:	100081e4 	.word	0x100081e4
+100060ac:	10008200 	.word	0x10008200
 
 100060b0 <dma_channel_cleanup>:
 100060b0:	0182      	lsls	r2, r0, #6
@@ -11688,10 +11688,10 @@ Disassembly of section .text:
 10006140:	20000970 	.word	0x20000970
 10006144:	20000620 	.word	0x20000620
 10006148:	20000610 	.word	0x20000610
-1000614c:	10008204 	.word	0x10008204
-10006150:	1004008c 	.word	0x1004008c
-10006154:	10008224 	.word	0x10008224
-10006158:	10008278 	.word	0x10008278
+1000614c:	10008220 	.word	0x10008220
+10006150:	100400a4 	.word	0x100400a4
+10006154:	10008240 	.word	0x10008240
+10006158:	10008294 	.word	0x10008294
 
 1000615c <async_context_add_at_time_worker_in_ms>:
 1000615c:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -11777,9 +11777,9 @@ Disassembly of section .text:
 10006204:	20000974 	.word	0x20000974
 10006208:	20000978 	.word	0x20000978
 1000620c:	20000620 	.word	0x20000620
-10006210:	10008298 	.word	0x10008298
-10006214:	100400a8 	.word	0x100400a8
-10006218:	10008224 	.word	0x10008224
+10006210:	100082b4 	.word	0x100082b4
+10006214:	100400c0 	.word	0x100400c0
+10006218:	10008240 	.word	0x10008240
 
 1000621c <cyw43_set_irq_enabled>:
 1000621c:	b510      	push	{r4, lr}
@@ -11819,9 +11819,9 @@ Disassembly of section .text:
 10006264:	f7fd f918 	bl	10003498 <__assert_func>
 10006268:	20000970 	.word	0x20000970
 1000626c:	1000627d 	.word	0x1000627d
-10006270:	10008298 	.word	0x10008298
-10006274:	100400b8 	.word	0x100400b8
-10006278:	10008224 	.word	0x10008224
+10006270:	100082b4 	.word	0x100082b4
+10006274:	100400d0 	.word	0x100400d0
+10006278:	10008240 	.word	0x10008240
 
 1000627c <cyw43_gpio_irq_handler>:
 1000627c:	b510      	push	{r4, lr}
@@ -11878,15 +11878,15 @@ Disassembly of section .text:
 100062ee:	46c0      	nop			@ (mov r8, r8)
 100062f0:	20000970 	.word	0x20000970
 100062f4:	1000627d 	.word	0x1000627d
-100062f8:	10008298 	.word	0x10008298
-100062fc:	10040078 	.word	0x10040078
-10006300:	10008224 	.word	0x10008224
+100062f8:	100082b4 	.word	0x100082b4
+100062fc:	10040090 	.word	0x10040090
+10006300:	10008240 	.word	0x10008240
 
 10006304 <no_lwip_fail>:
 10006304:	b510      	push	{r4, lr}
 10006306:	4801      	ldr	r0, [pc, #4]	@ (1000630c <no_lwip_fail+0x8>)
 10006308:	f7fa f900 	bl	1000050c <panic>
-1000630c:	100082d8 	.word	0x100082d8
+1000630c:	100082f4 	.word	0x100082f4
 
 10006310 <cyw43_post_poll_hook>:
 10006310:	b510      	push	{r4, lr}
@@ -11908,9 +11908,9 @@ Disassembly of section .text:
 10006332:	f7fd f8b1 	bl	10003498 <__assert_func>
 10006336:	46c0      	nop			@ (mov r8, r8)
 10006338:	20000970 	.word	0x20000970
-1000633c:	10008298 	.word	0x10008298
-10006340:	10040060 	.word	0x10040060
-10006344:	10008224 	.word	0x10008224
+1000633c:	100082b4 	.word	0x100082b4
+10006340:	10040078 	.word	0x10040078
+10006344:	10008240 	.word	0x10008240
 
 10006348 <cyw43_schedule_internal_poll_dispatch>:
 10006348:	b510      	push	{r4, lr}
@@ -11933,9 +11933,9 @@ Disassembly of section .text:
 1000636c:	20000974 	.word	0x20000974
 10006370:	20000970 	.word	0x20000970
 10006374:	20000610 	.word	0x20000610
-10006378:	100082f8 	.word	0x100082f8
-1000637c:	10040038 	.word	0x10040038
-10006380:	10008224 	.word	0x10008224
+10006378:	10008314 	.word	0x10008314
+1000637c:	10040050 	.word	0x10040050
+10006380:	10008240 	.word	0x10008240
 
 10006384 <cyw43_driver_init>:
 10006384:	b510      	push	{r4, lr}
@@ -12000,9 +12000,9 @@ Disassembly of section .text:
 10006408:	20000610 	.word	0x20000610
 1000640c:	100062bd 	.word	0x100062bd
 10006410:	2000097c 	.word	0x2000097c
-10006414:	10008204 	.word	0x10008204
-10006418:	10040024 	.word	0x10040024
-1000641c:	10008224 	.word	0x10008224
+10006414:	10008220 	.word	0x10008220
+10006418:	1004003c 	.word	0x1004003c
+1000641c:	10008240 	.word	0x10008240
 
 10006420 <cyw43_hal_generate_laa_mac>:
 10006420:	b510      	push	{r4, lr}
@@ -12026,7 +12026,7 @@ Disassembly of section .text:
 1000644a:	7023      	strb	r3, [r4, #0]
 1000644c:	b002      	add	sp, #8
 1000644e:	bd10      	pop	{r4, pc}
-10006450:	1000830c 	.word	0x1000830c
+10006450:	10008328 	.word	0x10008328
 
 10006454 <cyw43_thread_enter>:
 10006454:	b510      	push	{r4, lr}
@@ -12212,7 +12212,7 @@ Disassembly of section .text:
 100065b0:	4801      	ldr	r0, [pc, #4]	@ (100065b8 <async_context_threadsafe_background_lock_check+0x28>)
 100065b2:	f7f9 ffab 	bl	1000050c <panic>
 100065b6:	46c0      	nop			@ (mov r8, r8)
-100065b8:	10007dcc 	.word	0x10007dcc
+100065b8:	10007de8 	.word	0x10007de8
 
 100065bc <process_under_lock>:
 100065bc:	b5d0      	push	{r4, r6, r7, lr}
@@ -12308,11 +12308,11 @@ Disassembly of section .text:
 1000667c:	6a20      	ldr	r0, [r4, #32]
 1000667e:	f7fa fe2f 	bl	100012e0 <alarm_pool_cancel_alarm>
 10006682:	e7c2      	b.n	1000660a <process_under_lock+0x4e>
-10006684:	10008344 	.word	0x10008344
-10006688:	10040164 	.word	0x10040164
-1000668c:	1000836c 	.word	0x1000836c
+10006684:	10008360 	.word	0x10008360
+10006688:	1004017c 	.word	0x1004017c
+1000668c:	10008388 	.word	0x10008388
 10006690:	10006571 	.word	0x10006571
-10006694:	100086f0 	.word	0x100086f0
+10006694:	10008708 	.word	0x10008708
 
 10006698 <lock_release>:
 10006698:	b510      	push	{r4, lr}
@@ -12379,9 +12379,9 @@ Disassembly of section .text:
 10006716:	21b1      	movs	r1, #177	@ 0xb1
 10006718:	f7fc febe 	bl	10003498 <__assert_func>
 1000671c:	10006785 	.word	0x10006785
-10006720:	100083d8 	.word	0x100083d8
-10006724:	100400f8 	.word	0x100400f8
-10006728:	1000836c 	.word	0x1000836c
+10006720:	100083f4 	.word	0x100083f4
+10006724:	10040110 	.word	0x10040110
+10006728:	10008388 	.word	0x10008388
 
 1000672c <async_context_threadsafe_background_deinit>:
 1000672c:	b570      	push	{r4, r5, r6, lr}
@@ -12416,9 +12416,9 @@ Disassembly of section .text:
 10006770:	6a20      	ldr	r0, [r4, #32]
 10006772:	f7fa fdb5 	bl	100012e0 <alarm_pool_cancel_alarm>
 10006776:	e7e6      	b.n	10006746 <async_context_threadsafe_background_deinit+0x1a>
-10006778:	10008400 	.word	0x10008400
-1000677c:	1004010c 	.word	0x1004010c
-10006780:	1000836c 	.word	0x1000836c
+10006778:	1000841c 	.word	0x1000841c
+1000677c:	10040124 	.word	0x10040124
+10006780:	10008388 	.word	0x10008388
 
 10006784 <low_priority_irq_handler>:
 10006784:	b570      	push	{r4, r5, r6, lr}
@@ -12466,10 +12466,10 @@ Disassembly of section .text:
 100067e2:	f7ff feeb 	bl	100065bc <process_under_lock>
 100067e6:	e7e9      	b.n	100067bc <low_priority_irq_handler+0x38>
 100067e8:	20000814 	.word	0x20000814
-100067ec:	10008428 	.word	0x10008428
-100067f0:	100400dc 	.word	0x100400dc
-100067f4:	1000836c 	.word	0x1000836c
-100067f8:	10008344 	.word	0x10008344
+100067ec:	10008444 	.word	0x10008444
+100067f0:	100400f4 	.word	0x100400f4
+100067f4:	10008388 	.word	0x10008388
+100067f8:	10008360 	.word	0x10008360
 
 100067fc <async_context_threadsafe_background_wait_for_work_until>:
 100067fc:	b510      	push	{r4, lr}
@@ -12600,10 +12600,10 @@ Disassembly of section .text:
 1000690a:	46c0      	nop			@ (mov r8, r8)
 1000690c:	20000814 	.word	0x20000814
 10006910:	10006785 	.word	0x10006785
-10006914:	100083d8 	.word	0x100083d8
-10006918:	100400c8 	.word	0x100400c8
-1000691c:	1000836c 	.word	0x1000836c
-10006920:	10008428 	.word	0x10008428
+10006914:	100083f4 	.word	0x100083f4
+10006918:	100400e0 	.word	0x100400e0
+1000691c:	10008388 	.word	0x10008388
+10006920:	10008444 	.word	0x10008444
 
 10006924 <async_context_threadsafe_background_default_config>:
 10006924:	23ff      	movs	r3, #255	@ 0xff
@@ -12657,10 +12657,10 @@ Disassembly of section .text:
 1000698c:	4804      	ldr	r0, [pc, #16]	@ (100069a0 <async_context_threadsafe_background_init+0x70>)
 1000698e:	21d8      	movs	r1, #216	@ 0xd8
 10006990:	f7fc fd82 	bl	10003498 <__assert_func>
-10006994:	10040178 	.word	0x10040178
-10006998:	10008458 	.word	0x10008458
-1000699c:	10040138 	.word	0x10040138
-100069a0:	1000836c 	.word	0x1000836c
+10006994:	10040190 	.word	0x10040190
+10006998:	10008474 	.word	0x10008474
+1000699c:	10040150 	.word	0x10040150
+100069a0:	10008388 	.word	0x10008388
 
 100069a4 <async_context_base_add_at_time_worker>:
 100069a4:	3008      	adds	r0, #8
@@ -12779,10 +12779,10 @@ Disassembly of section .text:
 10006a7a:	0003      	movs	r3, r0
 10006a7c:	e7fb      	b.n	10006a76 <async_context_base_remove_ready_at_time_worker+0x62>
 10006a7e:	46c0      	nop			@ (mov r8, r8)
-10006a80:	10008498 	.word	0x10008498
-10006a84:	100401b0 	.word	0x100401b0
-10006a88:	100084bc 	.word	0x100084bc
-10006a8c:	100086f0 	.word	0x100086f0
+10006a80:	100084b4 	.word	0x100084b4
+10006a84:	100401c8 	.word	0x100401c8
+10006a88:	100084d8 	.word	0x100084d8
+10006a8c:	10008708 	.word	0x10008708
 
 10006a90 <async_context_base_refresh_next_timeout>:
 10006a90:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -12819,7 +12819,7 @@ Disassembly of section .text:
 10006ace:	6145      	str	r5, [r0, #20]
 10006ad0:	b003      	add	sp, #12
 10006ad2:	bdf0      	pop	{r4, r5, r6, r7, pc}
-10006ad4:	100086f0 	.word	0x100086f0
+10006ad4:	10008708 	.word	0x10008708
 
 10006ad8 <async_context_base_execute_once>:
 10006ad8:	b570      	push	{r4, r5, r6, lr}
@@ -13341,9 +13341,9 @@ Disassembly of section .data:
 200001ca:	2a00      	cmp	r2, #0
 200001cc:	d0d4      	beq.n	20000178 <recursive_mutex_enter_blocking+0xc>
 200001ce:	bd10      	pop	{r4, pc}
-200001d0:	10007220 	.word	0x10007220
-200001d4:	10008688 	.word	0x10008688
-200001d8:	100071e0 	.word	0x100071e0
+200001d0:	10007238 	.word	0x10007238
+200001d4:	100086a4 	.word	0x100086a4
+200001d8:	100071f4 	.word	0x100071f4
 
 200001dc <mutex_try_enter>:
 200001dc:	b510      	push	{r4, lr}
@@ -13425,9 +13425,9 @@ Disassembly of section .data:
 20000280:	f000 f96e 	bl	20000560 <____assert_func_veneer>
 20000284:	2000      	movs	r0, #0
 20000286:	e7ef      	b.n	20000268 <recursive_mutex_try_enter+0x44>
-20000288:	10007220 	.word	0x10007220
-2000028c:	1000866c 	.word	0x1000866c
-20000290:	100071e0 	.word	0x100071e0
+20000288:	10007238 	.word	0x10007238
+2000028c:	10008688 	.word	0x10008688
+20000290:	100071f4 	.word	0x100071f4
 
 20000294 <mutex_enter_block_until>:
 20000294:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -13488,9 +13488,9 @@ Disassembly of section .data:
 20000312:	46a8      	mov	r8, r5
 20000314:	bdf0      	pop	{r4, r5, r6, r7, pc}
 20000316:	46c0      	nop			@ (mov r8, r8)
-20000318:	10007228 	.word	0x10007228
-2000031c:	10008654 	.word	0x10008654
-20000320:	100071e0 	.word	0x100071e0
+20000318:	10007240 	.word	0x10007240
+2000031c:	10008670 	.word	0x10008670
+20000320:	100071f4 	.word	0x100071f4
 
 20000324 <mutex_try_enter_block_until>:
 20000324:	b570      	push	{r4, r5, r6, lr}
@@ -13546,9 +13546,9 @@ Disassembly of section .data:
 20000390:	21d5      	movs	r1, #213	@ 0xd5
 20000392:	f000 f8e5 	bl	20000560 <____assert_func_veneer>
 20000396:	46c0      	nop			@ (mov r8, r8)
-20000398:	1000723c 	.word	0x1000723c
-2000039c:	10008648 	.word	0x10008648
-200003a0:	100071e0 	.word	0x100071e0
+20000398:	10007254 	.word	0x10007254
+2000039c:	10008664 	.word	0x10008664
+200003a0:	100071f4 	.word	0x100071f4
 
 200003a4 <recursive_mutex_exit>:
 200003a4:	b510      	push	{r4, lr}
@@ -13597,10 +13597,10 @@ Disassembly of section .data:
 20000408:	f382 8810 	msr	PRIMASK, r2
 2000040c:	e7ea      	b.n	200003e4 <recursive_mutex_exit+0x40>
 2000040e:	46c0      	nop			@ (mov r8, r8)
-20000410:	1000723c 	.word	0x1000723c
-20000414:	10008630 	.word	0x10008630
-20000418:	100071e0 	.word	0x100071e0
-2000041c:	10007260 	.word	0x10007260
+20000410:	10007254 	.word	0x10007254
+20000414:	1000864c 	.word	0x1000864c
+20000418:	100071f4 	.word	0x100071f4
+2000041c:	10007278 	.word	0x10007278
 
 20000420 <flash_init_boot2_copyout>:
 20000420:	4b09      	ldr	r3, [pc, #36]	@ (20000448 <flash_init_boot2_copyout+0x28>)
@@ -13748,9 +13748,9 @@ Disassembly of section .data:
 20000544:	00004649 	.word	0x00004649
 20000548:	00005845 	.word	0x00005845
 2000054c:	00004346 	.word	0x00004346
-20000550:	100077a4 	.word	0x100077a4
-20000554:	10008964 	.word	0x10008964
-20000558:	10007684 	.word	0x10007684
+20000550:	100077bc 	.word	0x100077bc
+20000554:	1000897c 	.word	0x1000897c
+20000558:	1000769c 	.word	0x1000769c
 
 2000055c <__aeabi_idiv0>:
 2000055c:	4770      	bx	lr
